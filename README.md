@@ -20,7 +20,7 @@ var xAuth = new XAuth({
 				next();
 			},
 			function(req, res, next){
-				
+
 				next();
 			}
     ],
@@ -40,6 +40,8 @@ router.use('/theme', require('./controllers/ThemeController')({xAuth: xAuth}).ro
 
 module.exports = router;
 ```
+
+inside: ./controllers/ThemeController
 
 ```javascript
 var express = require('express');
