@@ -15,7 +15,7 @@ var xAuth = new XAuth({
     	return "Admin";
     },
     beforeAuthorization: [
-			// middleware functions executed before Authorization function
+			// middleware functions are executed before Authorization function
 			function(req, res, next){
 
 				next();
