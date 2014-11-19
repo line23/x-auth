@@ -13,8 +13,20 @@ var xAuth = new XAuth({
     getUserRole: function(req, res){
     	return "Admin";
     },
-    beforeAuthorization: [],
-    // onFailureAuthorization: function(req, res){}
+    beforeAuthorization: [
+			// middleware functions executed before Authorization function
+			function(req, res, next){
+
+				next();
+			},
+			function(req, res, next){
+				
+				next();
+			}
+    ],
+    onFailureAuthorization: function(req, res){
+			res.send(401, 'Unauthorized');
+  	}
 });
 
 xAuth.register("User");
