@@ -8,6 +8,7 @@ $ npm install x-auth
 ```javascript
 var express = require('express');
 var router  = express.Router();
+var XAuth 	= require('x-auth');
 
 var xAuth = new XAuth({
     getUserRole: function(req, res){
