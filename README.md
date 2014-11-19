@@ -54,8 +54,7 @@ var router  = express.Router();
 var Controller = function(settings){
 
 	router.get(
-		'/', 
-
+		'/',
 		// add route endpoint
 		settings.xAuth.endpoint('themebox').concat(
 		function(req, res) {
