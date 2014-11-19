@@ -37,9 +37,9 @@ xAuth.register("Admin");
 // Admin extends User and gets access to everything that User can access.
 xAuth.extend('Admin', 'User');
 
-// User can access 'themebox' endpoint.
-// Admin extends User, so Admin also has access to 'themebox' endpoint.
-xAuth.canAccess('User', ['themebox']);
+// User can access 'home' endpoint.
+// Admin extends User, so Admin also has access to 'home' endpoint.
+xAuth.canAccess('User', ['home']);
 
 router.use('/theme', require('./controllers/ThemeController')({xAuth: xAuth}).router);
 
@@ -57,7 +57,7 @@ var Controller = function(settings){
 	router.get(
 		'/',
 		// add route endpoint
-		settings.xAuth.endpoint('themebox').concat(
+		settings.xAuth.endpoint('home').concat(
 		function(req, res) {
 			
 			
